@@ -1,16 +1,22 @@
 .portfolio-items-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 18px;
+    padding: 10px;
 
     .portfolio-item-wrapper {
         position: relative;
+        
 
         .portfolio-img-background {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 350px;
+            height: 420px;
             width:100%;
+            border: 4px solid $blue;
+            border-radius: 25px;
+            
         }
 
         .img-text-wrapper {

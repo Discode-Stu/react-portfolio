@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import contactImg from "../../../static/assets/images/contact/contact.jpg"
 import ImageReveal from "../../animationFeatures/imageReveal"
+import BlueLogo from '../../images/blueTeacupLogo.jpg'
 
 export default function () {
     return (
@@ -19,7 +20,7 @@ export default function () {
         
             </div> */}
             <div className='contact-image-reveal'>
-                <ImageReveal />
+                <ImageReveal image={BlueLogo} />
             </div>
            
 
@@ -61,25 +62,27 @@ export default function () {
                             </div>
                         <div className="text">
                             6 Chesterfield Rd
+                            <br></br>
+                            Williamsburg, Mass
                         </div>
                     </div>
                     <div className="bullet-point-group">
                         <div className="icon">
-                        <FontAwesomeIcon icon="city" className="icon"/>
+                        <FontAwesomeIcon icon={['fab','github-square']} className="icon"/>
                             </div>
                             
-                        <div className="text">
-                            Williamsburg
-                        </div>
+                        <a href={"https://github.com/Discode-Stu"} className="atag">
+                            Discode-Stu
+                        </a>
                     </div>
 
                     <div className="bullet-point-group">
                         <div className="icon">
-                        <FontAwesomeIcon icon="flag-usa" className="icon"/>
-                            </div>
-                        <div className="text">
-                            Mass
+                            <FontAwesomeIcon icon={['fab','linkedin']} className="icon"/>
                         </div>
+                        <a href={"https://github.com/Discode-Stu"} className="atag">
+                            LinkedIn
+                        </a>
                     </div>
                 </div>
             </div>

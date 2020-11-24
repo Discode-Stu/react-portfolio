@@ -3,6 +3,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: calc(100vh - 84px);
+    background-color: $offwhite;
+
+    .left-column {
+        display: grid;
+        align-items: center;
+    }
+
 
     .contact-image-reveal {
         align-self: center;
@@ -43,6 +50,14 @@
                     font-size: 1.5em;
                     font-weight: 900;
                     margin-left: 21px;
+                }
+
+                .atag {
+                    font-size: 1.5em;
+                    font-weight: 900;
+                    margin-left: 21px;
+                    color: black;
+                    text-decoration: none;
                 }
             }
 

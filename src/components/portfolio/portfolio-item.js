@@ -38,7 +38,7 @@ export default class PortfolioItem extends Component {
                             <div className="subtitle">{description}</div>
                         </div>
                     
-                        <div className="subtitle">{description}</div>
+                        {/* <div className="subtitle">{description}</div> */}
                     </div>
                 </Link>
             )

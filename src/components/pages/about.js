@@ -2,18 +2,22 @@
 import React from 'react';
 
 import aboutImg from "../../../static/assets/images/bio/aboutImg.jpg"
+import ImageReveal from '../../animationFeatures/imageReveal';
 
 export default function () { return (
 
     <div className="content-page-wrapper">
-        <div 
-        className="left-column"
-        style={{
-            background: "url(" + aboutImg + ") no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center"
-        }}
-        />
+        <div className="left-column">
+            <div className='about-image-container'>
+        
+                <ImageReveal image={aboutImg}/>
+        {/* // style={{ */}
+        {/* //     background: "url(" + aboutImg + ") no-repeat",
+        //     backgroundSize: "cover",
+        //     backgroundPosition: "center"
+        // }} */}
+            </div>
+        </div> 
 
         <div className="right-column">
             <p>

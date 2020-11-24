@@ -19,9 +19,9 @@ export default function() {
             <div>
                 <ThreeCirclesAnimation />
             </div> */}
-            <div>
+            {/* <div>
                 <ImageReveal />
-            </div>
+            </div> */}
         </React.Fragment>
 
     );

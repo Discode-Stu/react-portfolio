@@ -10,11 +10,11 @@ import { gsap } from "gsap";
 gsap.registerPlugin(CSSRulePlugin);
 
 import Logo from '../images/cupPlantLogo.jpg';
-import BlueLogo from '../images/blueTeacupLogo.jpg'
+// import BlueLogo from '../images/blueTeacupLogo.jpg'
 // import { Tween } from 'gsap/gsap-core';
 
 
-function ImageReveal() {
+function ImageReveal(props) {
   let container = useRef(null)
   let image = useRef(null)
   let imageReveal = CSSRulePlugin.getRule('.reveal-blue-logo:after')
@@ -35,7 +35,7 @@ function ImageReveal() {
         <div className='reveal-blue-logo'>
           <img 
           ref={el => {image = el}}
-          src={BlueLogo} 
+          src={props.image} 
           alt="hello" 
           // className='reveal-blue-logo' 
           />
