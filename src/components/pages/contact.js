@@ -2,13 +2,13 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import contactImg from "../../../static/assets/images/contact/contact.jpg"
-
+import ImageReveal from "../../animationFeatures/imageReveal"
 
 export default function () {
     return (
         
         <div className="content-page-wrapper">
-            <div 
+            {/* <div 
             className="left-column"
             style={{
                 background: "url(" + contactImg + ") no-repeat",
@@ -17,7 +17,11 @@ export default function () {
             }}
             >
         
+            </div> */}
+            <div className='contact-image-reveal'>
+                <ImageReveal />
             </div>
+           
 
             <div 
             className="right-column">
@@ -38,7 +42,7 @@ export default function () {
                         <FontAwesomeIcon icon="phone" className="icon"/>
                             </div>
                         <div className="text">
-                            555-555-5555
+                            860-977-2982
                         </div>
                     </div>
                     <div className="bullet-point-group">
@@ -47,7 +51,7 @@ export default function () {
                             </div>
                             
                         <div className="text">
-                            fakeemail@email.com
+                            dstuart85@yahoo.com
                         </div>
                     </div>
 
@@ -56,7 +60,7 @@ export default function () {
                         <FontAwesomeIcon icon="address-book" className="icon"/>
                             </div>
                         <div className="text">
-                            42 Thompson Ln
+                            6 Chesterfield Rd
                         </div>
                     </div>
                     <div className="bullet-point-group">
@@ -65,7 +69,7 @@ export default function () {
                             </div>
                             
                         <div className="text">
-                            East Boston
+                            Williamsburg
                         </div>
                     </div>
 

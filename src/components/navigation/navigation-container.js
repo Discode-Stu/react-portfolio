@@ -38,6 +38,11 @@ const NavigationComponent = props => {
                             Home
                         </NavLink>
                     </div>
+                    <div className="nav-link-wrapper">
+                        <NavLink exact to ="/resume" activeClassName="nav-link-active">
+                            Resume
+                        </NavLink>
+                    </div>
 
                     <div className="nav-link-wrapper">
                         <NavLink to ="/about-me" activeClassName="nav-link-active">

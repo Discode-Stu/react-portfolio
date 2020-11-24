@@ -14,6 +14,7 @@ import PortfolioDetail from "./portfolio/portfolio-detail";
 import Auth from "./pages/auth";
 import NoMatch from "./pages/no-match";
 import Icons from "../helpers/icons";
+import Resume from "./pages/resume";
 
 
 export default class App extends Component {
@@ -117,6 +118,7 @@ authorizedPages() {
                 }
                 />
 
+              <Route path="/resume" component={Resume} />
               <Route path="/about-me" component={About} />
               <Route path="/contact" component={Contact} />
 

@@ -4,12 +4,26 @@
     grid-template-columns: 1fr 1fr;
     height: calc(100vh - 84px);
 
+    .contact-image-reveal {
+        align-self: center;
+    }
+
     .right-column {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 100px;
+        // padding: 100px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 25px;
+
+        text-align: justify;
+
+        .bold {
+            font-weight: bold;
+            // color:green;
+        }
 
         .contact-bullet-points {
             display: grid;
@@ -35,6 +49,7 @@
         }
     }
 }
+
 
 
 //   .icon {
