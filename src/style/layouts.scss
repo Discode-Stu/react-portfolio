@@ -1,71 +1,74 @@
 .content-page-wrapper {
-    width: 100vw;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 84px);
+  background-color: $offwhite;
+
+  .left-column {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: calc(100vh - 84px);
-    background-color: $offwhite;
+    align-items: center;
+  }
 
-    .left-column {
-        display: grid;
-        align-items: center;
+  .contact-image-reveal {
+    align-self: center;
+  }
+
+  .right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // padding: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 25px;
+
+    text-align: justify;
+
+    .bold {
+      font-weight: bold;
+      // color:green;
     }
 
+    .contact-bullet-points {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 21px;
 
-    .contact-image-reveal {
-        align-self: center;
-    }
-
-    .right-column {
+      .bullet-point-group {
         display: flex;
-        justify-content: center;
         align-items: center;
-        flex-direction: column;
-        // padding: 100px;
-        padding-left: 60px;
-        padding-right: 60px;
-        padding-top: 25px;
 
-        text-align: justify;
-
-        .bold {
-            font-weight: bold;
-            // color:green;
+        .icon {
+          font-size: 2em;
+          color: $dark-teal;
         }
 
-        .contact-bullet-points {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 21px;
-
-            .bullet-point-group {
-                display: flex;
-                align-items: center;
-
-                .icon {
-                    font-size: 2em;
-                    color: $teal;
-                }
-
-                .text {
-                    font-size: 1.5em;
-                    font-weight: 900;
-                    margin-left: 21px;
-                }
-
-                .atag {
-                    font-size: 1.5em;
-                    font-weight: 900;
-                    margin-left: 21px;
-                    color: black;
-                    text-decoration: none;
-                }
-            }
-
+        .text {
+          color: $charcoal;
+          font-size: 1.5em;
+          font-weight: 900;
+          margin-left: 21px;
+        //   opacity: .3;
         }
+
+        .atag {
+          font-size: 1.5em;
+          font-weight: 900;
+          margin-left: 21px;
+          color: $charcoal;
+          &:hover {
+            color: $dark-teal;
+        }
+        //   text-decoration: none;
+
+        
+        }
+      }
     }
+  }
 }
-
-
 
 //   .icon {
 //     color: $charcoal;

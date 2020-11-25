@@ -7,31 +7,31 @@ import BlueLogo from '../images/blueTeacupLogo.jpg'
 // import { Tween } from 'gsap/gsap-core';
 
 
-function HomepageFeature() {
+function HomepageFeature(props) {
   let logoItem = useRef(null);
   let textItem = useRef(null)
 
   useEffect(() => {
-    console.log(logoItem);
-    TweenMax.to(
-      logoItem,
-      5,
-      {
-        opacity: 1, 
-        y: 120,
-        ease: Power3.easeOut,
-        delay: 1
-      }
-    )
-    TweenMax.to(
+    // console.log(logoItem);
+    // TweenMax.to(
+    //   logoItem,
+    //   5,
+    //   {
+    //     opacity: 1, 
+    //     y: 120,
+    //     ease: Power3.easeOut,
+    //     delay: 1
+    //   }
+    // )
+    TweenMax.from(
       textItem,
-      6,
+      3,
       {
         opacity: 0, 
-        y: 120,
-        x: 120,
+        y: 0,
+        x: 342,
         ease: Power3.easeOut,
-        delay: 1
+        delay: .5
       }
     )
     // logoItem.style.display= 'none'
@@ -45,18 +45,20 @@ function HomepageFeature() {
         src={Logo} 
         alt="hello" 
         className='plantCupLogo' /> */}
-        <div>
+        {/* <div>
           <img 
           ref={el => {logoItem = el}}
           src={BlueLogo} 
           alt="hello" 
           className='plantCupLogo' 
           />
-        </div>
+        </div> */}
         <div>
           <p
             ref={el => {textItem = el}}
-            >DiscodeStu
+            >
+
+              {props.text}
           </p>
         </div>
 
