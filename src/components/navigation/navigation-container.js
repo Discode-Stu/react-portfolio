@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { withRouter } from "react-router";
 import { NavLink } from 'react-router-dom';
 
+import {motion} from 'framer-motion';
+
 const NavigationComponent = props => {
     const dynamicLink = (route, linkText) => {
         return(
@@ -32,7 +34,17 @@ const NavigationComponent = props => {
 
         return (
             <div className="nav-wrapper">
-                <div className="left-side">
+                <motion.div className="left-side"
+                    initial={{scale: .1, fontWeight: 300, x: 600, y: 25}}
+                    animate={{scale: 1, fontWeight: 700, x:0, y: 0}}
+                    transition={{
+                        delay: 1.5, duration: 3, 
+                        type:'tween', ease: "anticipate"}}
+                >
+                
+                
+                
+                
                     <div className="nav-link-wrapper">
                         <NavLink exact to ="/" activeClassName="nav-link-active">
                             Home
@@ -65,16 +77,22 @@ const NavigationComponent = props => {
                 {props.loggedInStatus === "LOGGED_IN" ? (
                 dynamicLink("/portfolio-manager", "Portfolio Manager")
                 ) : null}      
-                </div>
+                </motion.div>
 
-                <div className="right-side">
+                <motion.div className="right-side"
+                    initial={{scale: 0, fontWeight: 300, x: -500, y: 25}}
+                    animate={{scale: 1.4, fontWeight: 700, x: -20, y: 0}}
+                    transition={{ 
+                        delay: 1.5, repeatType: "reverse", duration: 3, 
+                        type:'tween', ease: "anticipate"}}
+                >
                     DAN STUART
 
                     {props.loggedInStatus === "LOGGED_IN" ? (
                     <a onClick={handleSignOut}>
                         <FontAwesomeIcon icon="sign-out-alt" />
                         </a>) : null}
-                </div>
+                </motion.div>
             </div>
         
         );

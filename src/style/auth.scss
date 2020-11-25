@@ -4,10 +4,10 @@
     height: calc(100vh - 84px);
 
     .left-column {
-        // display: grid;
+        display:grid;
         margin-top: 40px;
         background-size: cover;
-        // align-items: center;
+        align-content: center;
 
     }
 
