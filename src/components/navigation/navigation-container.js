@@ -35,10 +35,10 @@ const NavigationComponent = props => {
         return (
             <div className="nav-wrapper">
                 <motion.div className="left-side"
-                    initial={{scale: .1, fontWeight: 300, x: 600, y: 25}}
+                    initial={{scale: 0, fontWeight: 300, x: 600, y: 25}}
                     animate={{scale: 1, fontWeight: 700, x:0, y: 0}}
                     transition={{
-                        delay: 1.5, duration: 3, 
+                        delay: .7, duration: 3, 
                         type:'tween', ease: "anticipate"}}
                 >
                 
@@ -83,7 +83,7 @@ const NavigationComponent = props => {
                     initial={{scale: 0, fontWeight: 300, x: -500, y: 25}}
                     animate={{scale: 1.4, fontWeight: 700, x: -20, y: 0}}
                     transition={{ 
-                        delay: 1.5, repeatType: "reverse", duration: 3, 
+                        delay: .5, repeatType: "reverse", duration: 3, 
                         type:'tween', ease: "anticipate"}}
                 >
                     DAN STUART

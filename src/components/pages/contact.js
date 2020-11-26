@@ -5,9 +5,25 @@ import contactImg from "../../../static/assets/images/contact/contact.jpg";
 import ImageReveal from "../../animationFeatures/imageReveal";
 import BlueLogo from "../../images/blueTeacupLogo.jpg";
 
-import HomepageFeature from "../../animationFeatures/homepageFeature"
+import HomepageFeature from "../../animationFeatures/homepageFeature";
+
+import { motion } from "framer-motion";
 
 export default function () {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  };
   return (
     <div className="content-page-wrapper">
       {/* <div 
@@ -25,16 +41,32 @@ export default function () {
       </div>
 
       <div className="right-column">
-        <div className="contact-bullet-points">
+        <motion.div
+          className="contact-bullet-points"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
           <div className="bullet-point-group">
             <div className="icon">
               <FontAwesomeIcon icon="user-circle" className="icon" />
             </div>
 
             <div className="text">
-                <HomepageFeature text="Daniel T. Stuart" />
-              
-                </div>
+              <motion.div
+                initial={{ scale: 0, fontWeight: 300, x: 300, y: 0 }}
+                animate={{ scale: 1, fontWeight: 700, x: 0, y: 0 }}
+                transition={{
+                  delay: 0.2,
+                  repeatType: "reverse",
+                  duration: 3,
+                  type: "tween",
+                  ease: "anticipate",
+                }}
+              >
+                Daniel T. Stuart
+              </motion.div>
+            </div>
           </div>
 
           <div className="bullet-point-group">
@@ -42,14 +74,39 @@ export default function () {
               <FontAwesomeIcon icon="phone" className="icon" />
             </div>
             <div className="text">
-            <HomepageFeature text="860-977-2982" /></div>
+              <motion.div
+                initial={{ scale: 0, fontWeight: 300, x: 300, y: 0 }}
+                animate={{ scale: 1, fontWeight: 700, x: 0, y: 0 }}
+                transition={{
+                  delay: 0.4,
+                  repeatType: "reverse",
+                  duration: 3,
+                  type: "tween",
+                  ease: "anticipate",
+                }}
+              >
+                860-977-2982
+              </motion.div>
+            </div>
           </div>
           <div className="bullet-point-group">
             <div className="icon">
               <FontAwesomeIcon icon="envelope" className="icon" />
             </div>
-            <div className="text">            
-            <HomepageFeature text="dstuart85@yahoo.com" />
+            <div className="text">
+              <motion.div
+                initial={{ scale: 0, fontWeight: 300, x: 300, y: 0 }}
+                animate={{ scale: 1, fontWeight: 700, x: 0, y: 0 }}
+                transition={{
+                  delay: 0.6,
+                  repeatType: "reverse",
+                  duration: 3,
+                  type: "tween",
+                  ease: "anticipate",
+                }}
+              >
+                dstuart85@yahoo.com
+              </motion.div>
             </div>
           </div>
 
@@ -58,7 +115,19 @@ export default function () {
               <FontAwesomeIcon icon="address-book" className="icon" />
             </div>
             <div className="text">
-              <HomepageFeature text="Williamsburg, Mass" />
+              <motion.div
+                initial={{ scale: 0, fontWeight: 300, x: 300, y: 0 }}
+                animate={{ scale: 1, fontWeight: 700, x: 0, y: 0 }}
+                transition={{
+                  delay: 0.8,
+                  repeatType: "reverse",
+                  duration: 3,
+                  type: "tween",
+                  ease: "anticipate",
+                }}
+              >
+                Williamsburg, Mass
+              </motion.div>
             </div>
           </div>
           <div className="bullet-point-group">
@@ -70,7 +139,19 @@ export default function () {
             </div>
 
             <a href={"https://github.com/Discode-Stu"} className="atag">
-              <HomepageFeature text="Discode-Stu" />
+              <motion.div
+                initial={{ scale: 0, fontWeight: 300, x: 300, y: 0 }}
+                animate={{ scale: 1, fontWeight: 700, x: 0, y: 0 }}
+                transition={{
+                  delay: 1,
+                  repeatType: "reverse",
+                  duration: 3,
+                  type: "tween",
+                  ease: "anticipate",
+                }}
+              >
+                Discode-Stu{" "}
+              </motion.div>
             </a>
           </div>
 
@@ -78,11 +159,26 @@ export default function () {
             <div className="icon">
               <FontAwesomeIcon icon={["fab", "linkedin"]} className="icon" />
             </div>
-            <a href={"https://www.linkedin.com/in/daniel-stuart-5520231a1/"} className="atag">
-              <HomepageFeature text="LinkedIn" />
+            <a
+              href={"https://www.linkedin.com/in/daniel-stuart-5520231a1/"}
+              className="atag"
+            >
+              <motion.div
+                initial={{ scale: 0, fontWeight: 300, x: 300, y: 0 }}
+                animate={{ scale: 1, fontWeight: 700, x: 0, y: 0 }}
+                transition={{
+                  delay: 1.2,
+                  repeatType: "reverse",
+                  duration: 3,
+                  type: "tween",
+                  ease: "anticipate",
+                }}
+              >
+                LinkedIn{" "}
+              </motion.div>
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
