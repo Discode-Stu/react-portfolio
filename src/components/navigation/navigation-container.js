@@ -9,11 +9,17 @@ import {motion} from 'framer-motion';
 const NavigationComponent = props => {
     const dynamicLink = (route, linkText) => {
         return(
-            <div className="nav-link-wrapper">            
+            <motion.div className="nav-link-wrapper"
+                whileHover={{
+                    scale: 1.3,
+                    textShadow: "0px 0px 4px #aaabb8",
+                    // boxShadow: "0px 0px 8px rgb(255,255,255",
+                }}           
+            >            
                 <NavLink to ={route} activeClassName="nav-link-active">
                     {linkText}
                 </NavLink>
-            </div>
+            </motion.div>
         );
     };
 
@@ -31,6 +37,12 @@ const NavigationComponent = props => {
         })
     };
 
+    const navVariants = {
+        hover: {
+            scale: 1.3,
+        }
+    }
+
 
         return (
             <div className="nav-wrapper">
@@ -38,41 +50,52 @@ const NavigationComponent = props => {
                     initial={{scale: 0, fontWeight: 300, x: 600, y: 25}}
                     animate={{scale: 1, fontWeight: 700, x:0, y: 0}}
                     transition={{
-                        delay: .7, duration: 3, 
+                        delay: .4, duration: 3, 
                         type:'tween', ease: "anticipate"}}
                 >
-                
-                
-                
-                
-                    <div className="nav-link-wrapper">
+                    <motion.div className="nav-link-wrapper"
+                        variants={navVariants}
+                        whileHover="hover"
+                    >
                         <NavLink exact to ="/" activeClassName="nav-link-active">
                             Home
                         </NavLink>
-                    </div>
-                    <div className="nav-link-wrapper">
+                    </motion.div>
+                    <motion.div className="nav-link-wrapper"
+                        variants={navVariants}
+                        whileHover="hover"
+                    >
                         <NavLink exact to ="/resume" activeClassName="nav-link-active">
                             Resume
                         </NavLink>
-                    </div>
+                    </motion.div>
 
-                    <div className="nav-link-wrapper">
+                    <motion.div className="nav-link-wrapper"
+                        variants={navVariants}
+                        whileHover="hover"
+                    >
                         <NavLink to ="/about-me" activeClassName="nav-link-active">
                             About
                         </NavLink>
-                    </div>
+                    </motion.div>
 
-                    <div className="nav-link-wrapper">            
+                    <motion.div className="nav-link-wrapper"
+                        variants={navVariants}
+                        whileHover="hover"                  
+                    >            
                         <NavLink to ="/contact" activeClassName="nav-link-active">
                             Contact
                         </NavLink>
-                    </div>
+                    </motion.div>
 
-                    <div className="nav-link-wrapper">            
+                    <motion.div className="nav-link-wrapper"
+                        variants={navVariants}
+                        whileHover="hover"  
+                    >            
                         <NavLink to ="/blog" activeClassName="nav-link-active">
                             Blog
                         </NavLink>
-                    </div>
+                    </motion.div>
 
                 {props.loggedInStatus === "LOGGED_IN" ? (
                 dynamicLink("/portfolio-manager", "Portfolio Manager")
@@ -81,10 +104,17 @@ const NavigationComponent = props => {
 
                 <motion.div className="right-side"
                     initial={{scale: 0, fontWeight: 300, x: -500, y: 25}}
-                    animate={{scale: 1.4, fontWeight: 700, x: -20, y: 0}}
+                    animate={{scale: 1.4, fontWeight: 700, x: -20, y: 2}}
                     transition={{ 
-                        delay: .5, repeatType: "reverse", duration: 3, 
+                        delay: .4, repeatType: "reverse", duration: 3, 
                         type:'tween', ease: "anticipate"}}
+                    whileHover={{
+                        scale: 1.5, 
+                        transition: {duration: .3, yoyo: Infinity}
+                    }}
+                    drag
+                    dragConstraints={{ left: -20, top: -20, right: 20, bottom: 20 }}
+                    dragElastic={0.7}
                 >
                     DAN STUART
 
