@@ -22,7 +22,8 @@
 
 @mixin input-element{
     input{
-        font-family: "Noto Sans JP", sans-serif;
+        // font-family: "Noto Sans JP", sans-serif;
+        font-family: 'Montserrat', sans-serif;
         color: $charcoal;
         padding: 5px 0px;
         width: 100%;

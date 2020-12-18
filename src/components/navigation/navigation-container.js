@@ -14,7 +14,9 @@ const NavigationComponent = props => {
                     scale: 1.3,
                     textShadow: "0px 0px 4px #aaabb8",
                     // boxShadow: "0px 0px 8px rgb(255,255,255",
-                }}           
+                }}    
+                initial={{scale: 0, fontWeight: 300, x: 0, y: -150}}
+                animate={{scale: 1, fontWeight: 700, x:0, y: 0, transition: {delay: 2}}}  
             >            
                 <NavLink to ={route} activeClassName="nav-link-active">
                     {linkText}
@@ -47,23 +49,27 @@ const NavigationComponent = props => {
         return (
             <div className="nav-wrapper">
                 <motion.div className="left-side"
-                    initial={{scale: 0, fontWeight: 300, x: 600, y: 25}}
-                    animate={{scale: 1, fontWeight: 700, x:0, y: 0}}
-                    transition={{
-                        delay: .4, duration: 3, 
-                        type:'tween', ease: "anticipate"}}
+                    
+                    // initial={{scale: 0, fontWeight: 300, x: 0, y: -150}}
+                    // animate={{scale: 1, fontWeight: 700, x:0, y: 0}}
+                    // transition={{
+                    //     delay: .4, duration: 3, 
+                    //     type:'tween', ease: "anticipate"}}
                 >
                     <motion.div className="nav-link-wrapper"
+                        whileHover={{ scale: 1.2 }}
                         variants={navVariants}
-                        whileHover="hover"
+                        initial={{scale: 0, fontWeight: 300, x: 0, y: -150}}
+                        animate={{scale: 1, fontWeight: 700, x:0, y: 0, transition: {delay: 0}}}
                     >
                         <NavLink exact to ="/" activeClassName="nav-link-active">
                             Home
                         </NavLink>
                     </motion.div>
                     <motion.div className="nav-link-wrapper"
-                        variants={navVariants}
-                        whileHover="hover"
+                        whileHover={{ scale: 1.2 }}
+                        initial={{scale: 0, fontWeight: 300, x: 0, y: -150}}
+                        animate={{scale: 1, fontWeight: 700, x:0, y: 0, transition: {delay: .4}}}
                     >
                         <NavLink exact to ="/resume" activeClassName="nav-link-active">
                             Resume
@@ -71,8 +77,9 @@ const NavigationComponent = props => {
                     </motion.div>
 
                     <motion.div className="nav-link-wrapper"
-                        variants={navVariants}
-                        whileHover="hover"
+                        whileHover={{ scale: 1.2 }}
+                        initial={{scale: 0, fontWeight: 300, x: 0, y: -150}}
+                        animate={{scale: 1, fontWeight: 700, x:0, y: 0, transition: {delay: .8}}}
                     >
                         <NavLink to ="/about-me" activeClassName="nav-link-active">
                             About
@@ -80,8 +87,9 @@ const NavigationComponent = props => {
                     </motion.div>
 
                     <motion.div className="nav-link-wrapper"
-                        variants={navVariants}
-                        whileHover="hover"                  
+                        whileHover={{ scale: 1.2 }}  
+                        initial={{scale: 0, fontWeight: 300, x: 0, y: -150}}
+                        animate={{scale: 1, fontWeight: 700, x:0, y: 0, transition: {delay: 1.2}}}               
                     >            
                         <NavLink to ="/contact" activeClassName="nav-link-active">
                             Contact
@@ -89,8 +97,10 @@ const NavigationComponent = props => {
                     </motion.div>
 
                     <motion.div className="nav-link-wrapper"
-                        variants={navVariants}
-                        whileHover="hover"  
+                        initial={{scale: 0, fontWeight: 300, x: 0, y: -150}}
+                        animate={{scale: 1, fontWeight: 700, x:0, y: 0, transition: {delay: 1.6}}}
+        
+                        whileHover={{ scale: 1.2 }}
                     >            
                         <NavLink to ="/blog" activeClassName="nav-link-active">
                             Blog
