@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import contactImg from "../../../static/assets/images/contact/contact.jpg";
+// import contactImg from "../../../static/assets/images/contact/contact.jpg";
 import ImageReveal from "../../animationFeatures/imageReveal";
 import BlueLogo from "../../images/blueTeacupLogo.jpg";
 
@@ -37,7 +37,12 @@ export default function () {
         
             </div> */}
       <div className="contact-image-reveal">
-        <ImageReveal image={BlueLogo} />
+        <ImageReveal
+          className1="reveal-blue-logo"
+          classNameImg="contact-image"
+          className="contact-image"
+          image={BlueLogo}
+        />
       </div>
 
       <div className="right-column">

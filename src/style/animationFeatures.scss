@@ -37,13 +37,20 @@
 
   border-radius: 500px;
 }
+// .contact-image {
+//   border-radius: 50% !important;
+//   border: red solid 1px;
+// }
 
 .reveal-blue-logo {
-  width: 701px;
-  height: 701px;
-  position: relative;
+  width: 100%;
+  height: 100%;
+  // position: relative;
   overflow: hidden;
   border-radius: 500px;
+  // border: 1px solid red;
+  display: flex;
+  align-items: center;
 
   &:after {
     content: '';
@@ -55,9 +62,16 @@
     background-color: #fff;
   }
 
+  .contact-image {
+    border-radius: 50%;
+  }
+
   img {
-    width: 700px;
+    width: 40%;
+    height: 80%;
     position: absolute;
-    border-radius: 250px; 
+    box-shadow: 4px 4px 4px #464864;
+    border-radius: 2%; 
   }
 }
+
