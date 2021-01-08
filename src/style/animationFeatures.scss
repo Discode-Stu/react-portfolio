@@ -45,9 +45,9 @@
 .reveal-blue-logo {
   width: 100%;
   height: 100%;
-  // position: relative;
+  position: relative;
   overflow: hidden;
-  border-radius: 500px;
+  // border-radius: 500px;
   // border: 1px solid red;
   display: flex;
   align-items: center;
@@ -62,16 +62,18 @@
     background-color: #fff;
   }
 
-  .contact-image {
-    border-radius: 50%;
-  }
+
 
   img {
-    width: 40%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    box-shadow: 4px 4px 4px #464864;
+    // box-shadow: 4px 4px 4px #464864;
     border-radius: 2%; 
+  }
+
+  .contact-image {
+    border-radius: 50%;
   }
 }
 
